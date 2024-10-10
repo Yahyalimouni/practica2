@@ -1,6 +1,6 @@
 site_name: Practica2 - NGINX
 nav:
-  - Home: index.md
+  - Home: https://Yahyalimouni/Yahyalimouni.github.io
   - Practica2: https://Yahyalimouni.github.io/practica2/
 
 theme:
