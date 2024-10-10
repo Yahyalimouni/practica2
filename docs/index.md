@@ -28,13 +28,13 @@ Comprobacion del funcionamiento de Nginx
 Abrimos el fichero de configuracion /etc/nginx/sites-available/vuestro_dominio
 ![09_abrir_fichero_configuracion.png](assets/capturas/09_abrir_fichero_configuracion.png)
 
-Configurarlo
+Configurarlo                                   
 ![09_fichero_configuracion.png](assets/capturas/09_fichero_configuracion.png)
 
-Crear el archivo simbolico al sites-enabled
+Crear el archivo simbolico al sites-enabled                         
 ![10_crear_archivo_simbolico.png](assets/capturas/10_crear_archivo_simbolico.png)
 
-Reiniciar el servidor
+Reiniciar el servidor                                 
 ![11_reiniciar_servidor.png](assets/capturas/11_reiniciar_servidor.png)
 
 Modificar el archivo C:\Windows\System32\drivers\etc\hosts poniendole la ip del servidor
@@ -45,13 +45,27 @@ Modificar el archivo C:\Windows\System32\drivers\etc\hosts poniendole la ip del 
 El FTP es un protocolo de transferencia de archivos entre sistemas conectados a una red TCP. Como su nombre indica, se trata de un protocolo que permite transferir archivos directamente de un dispositivo a otro. 
 
 ## Configuracion SFTP en Debian
-Instalamos vsftpd
+Instalamos vsftpd                                             
 ![13_instalar_vsftpd.png](assets/capturas/13_instalar_vsftpd.png)
 
-Creamos una carpeta ftp en /home/yahya
+Creamos una carpeta ftp en /home/yahya                                             
 ![13_crear_una_carpeta.png](assets/capturas/13_crear_una_carpeta.png)
 
 Creamos los certitificados de seguridad de la conexion
 ![15_securizar_ftp.png](assets/capturas/15_securizar_ftp.png)
 
+Configurar vsftpd
+![16_conifgurar_vsftpd_conf.png](assets/capturas/16_conifgurar_vsftpd_conf.png)
+
+Reiniciar el servicio vsdtpd
+![17_reiniciar_servicio_vsftpd.png](assets/capturas/17_reiniciar_servicio_vsftpd.png)
+
+Conexion a filezilla
+![18_conexion_filezilla.png](assets/capturas/18_conexion_filezilla.png)
+
+Drop the zipfile
+![19_drop_zipfile.png](assets/capturas/19_drop_zipfile.png)
+
+Unzip it using the command:
+`unzip Funciones.zip`
 
