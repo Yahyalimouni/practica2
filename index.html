@@ -55,11 +55,23 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#practica-2" class="nav-link">Practica 2</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#commands" class="nav-link">Commands</a>
+            <li class="nav-item" data-bs-level="2"><a href="#instalacion-servidor-web-nginx" class="nav-link">Instalación servidor web Nginx</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-bs-level="2"><a href="#creacion-de-la-carpeta-de-la-web" class="nav-link">Creacion de la carpeta de la web</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuracion-de-servidor-web-nginx" class="nav-link">Configuración de servidor web NGINX</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ftp" class="nav-link">FTP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#configuracion-sftp-en-debian" class="nav-link">Configuracion SFTP en Debian</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -71,20 +83,44 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="practica-2">Practica 2</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<p>Pasos para instalar y configurar Nginx en Debian 12.</p>
+<h2 id="instalacion-servidor-web-nginx">Instalación servidor web Nginx</h2>
+<p>Instalamos Nginx
+<img alt="01_sudo_apt_install_nginx.png" src="assets/capturas/01_sudo_apt_install_nginx.png" /></p>
+<p>Verificamos La instalacion:
+<img alt="02_verificar_la_instalacion.png" src="assets/capturas/02_verificar_la_instalacion.png" /></p>
+<h2 id="creacion-de-la-carpeta-de-la-web">Creacion de la carpeta de la web</h2>
+<p>Creacion de la carpeta de la web en /var/www/
+<img alt="03_creacion_del_directorio.png" src="assets/capturas/03_creacion_del_directorio.png" /></p>
+<p>Inicializar el repositorio git, y clonar el repo https://github.com/cloudacademy/statis-website-example
+<img alt="04_inicializar_git.png" src="assets/capturas/04_inicializar_git.png" />
+<img alt="05_clonar_repo.png" src="assets/capturas/05_clonar_repo.png" /></p>
+<p>Dar permisos al usuario <code>yahya</code>
+<img alt="06_chown_cambiar_prop.png" src="assets/capturas/06_chown_cambiar_prop.png" />
+<img alt="07_chmod_755_practica2.png" src="assets/capturas/07_chmod_755_practica2.png" /></p>
+<p>Comprobacion del funcionamiento de Nginx
+<img alt="08_comprobar_funcionamiento_nginx.png" src="assets/capturas/08_comprobar_funcionamiento_nginx.png" /></p>
+<h2 id="configuracion-de-servidor-web-nginx">Configuración de servidor web NGINX</h2>
+<p>Abrimos el fichero de configuracion /etc/nginx/sites-available/vuestro_dominio
+<img alt="09_abrir_fichero_configuracion.png" src="assets/capturas/09_abrir_fichero_configuracion.png" /></p>
+<p>Configurarlo
+<img alt="09_fichero_configuracion.png" src="assets/capturas/09_fichero_configuracion.png" /></p>
+<p>Crear el archivo simbolico al sites-enabled
+<img alt="10_crear_archivo_simbolico.png" src="assets/capturas/10_crear_archivo_simbolico.png" /></p>
+<p>Reiniciar el servidor
+<img alt="11_reiniciar_servidor.png" src="assets/capturas/11_reiniciar_servidor.png" /></p>
+<p>Modificar el archivo C:\Windows\System32\drivers\etc\hosts poniendole la ip del servidor
+<img alt="12_ip_debian.png" src="assets/capturas/12_ip_debian.png" />
+<img alt="12_DNS_local_etc_hosts_.png" src="assets/capturas/12_DNS_local_etc_hosts_.png" /></p>
+<h2 id="ftp">FTP</h2>
+<p>El FTP es un protocolo de transferencia de archivos entre sistemas conectados a una red TCP. Como su nombre indica, se trata de un protocolo que permite transferir archivos directamente de un dispositivo a otro. </p>
+<h2 id="configuracion-sftp-en-debian">Configuracion SFTP en Debian</h2>
+<p>Instalamos vsftpd
+<img alt="13_instalar_vsftpd.png" src="assets/capturas/13_instalar_vsftpd.png" /></p>
+<p>Creamos una carpeta ftp en /home/yahya
+<img alt="13_crear_una_carpeta.png" src="assets/capturas/13_crear_una_carpeta.png" /></p>
+<p>Creamos los certitificados de seguridad de la conexion
+<img alt="15_securizar_ftp.png" src="assets/capturas/15_securizar_ftp.png" /></p></div>
             </div>
         </div>
 
@@ -166,5 +202,5 @@ docs/
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2024-10-07 12:23:45.585482+00:00
+Build Date UTC : 2024-10-10 13:47:10.322215+00:00
 -->
